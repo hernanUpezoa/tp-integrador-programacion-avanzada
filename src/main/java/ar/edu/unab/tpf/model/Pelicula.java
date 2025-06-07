@@ -1,5 +1,5 @@
 // src/main/java/com/unab/tpf/integrador/model/Pelicula.java
-package com.unab.tpf.integrador.model;
+package ar.edu.unab.tpf.model;
 
 /**
  * Clase que representa una Película en el catálogo.

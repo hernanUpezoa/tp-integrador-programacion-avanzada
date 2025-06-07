@@ -1,5 +1,5 @@
 // src/main/java/com/unab/tpf/integrador/GestionPeliculasApplication.java
-package com.unab.tpf.integrador;
+package ar.edu.unab.tpf;
 
 import com.unab.tpf.integrador.model.Pelicula;
 import com.unab.tpf.integrador.service.CatalogoService;

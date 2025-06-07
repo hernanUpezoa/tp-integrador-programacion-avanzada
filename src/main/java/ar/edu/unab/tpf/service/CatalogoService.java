@@ -1,5 +1,5 @@
 // src/main/java/com/unab/tpf/integrador/service/CatalogoService.java
-package com.unab.tpf.integrador.service;
+package ar.edu.unab.tpf.service;
 
 import com.unab.tpf.integrador.model.Pelicula;
 import org.springframework.stereotype.Service;
