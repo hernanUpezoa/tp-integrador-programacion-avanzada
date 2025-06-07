@@ -33,7 +33,7 @@ public class GestionPeliculasApplication implements CommandLineRunner {
 
         while (opcion != 4) {
             mostrarMenu();
-            System.out.print("➡️  Seleccione una opción: ");
+            System.out.print(" Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Consumir el salto de línea
 
@@ -48,10 +48,10 @@ public class GestionPeliculasApplication implements CommandLineRunner {
                     buscarPelicula(scanner);
                     break;
                 case 4:
-                    System.out.println("✅ Gracias por usar el sistema. ¡Hasta luego!");
+                    System.out.println("Gracias por usar el sistema. ¡Hasta luego!");
                     break;
                 default:
-                    System.out.println("❌ Opción no válida. Por favor, intente de nuevo.");
+                    System.out.println("Opción no válida. Por favor, intente de nuevo.");
             }
         }
         scanner.close();
@@ -82,7 +82,7 @@ public class GestionPeliculasApplication implements CommandLineRunner {
         scanner.nextLine(); // Consumir el salto de línea
 
         Pelicula peliculaAgregada = catalogoService.agregarPelicula(titulo, director, ano);
-        System.out.println("✔️ Película agregada con éxito con ID: " + peliculaAgregada.getId());
+        System.out.println("Película agregada con éxito con ID: " + peliculaAgregada.getId());
     }
 
     private void buscarPelicula(Scanner scanner) {
@@ -91,8 +91,8 @@ public class GestionPeliculasApplication implements CommandLineRunner {
         String id = scanner.nextLine();
         catalogoService.buscarPorId(id)
                 .ifPresentOrElse(
-                        pelicula -> System.out.println("✔️ Película encontrada: " + pelicula),
-                        () -> System.out.println("❌ No se encontró ninguna película con ese ID.")
+                        pelicula -> System.out.println("Película encontrada: " + pelicula),
+                        () -> System.out.println("No se encontró ninguna película con ese ID.")
                 );
     }
 }
