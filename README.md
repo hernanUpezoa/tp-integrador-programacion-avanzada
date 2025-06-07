@@ -6,8 +6,8 @@ Este proyecto es una aplicación de consola **standalone** desarrollada en **Jav
 
 ### Integrantes
 
-* [Nombre y Apellido del Alumno 1]
-* [Nombre y Apellido del Alumno 2]
+* Rodrigo Gegorio
+* Hernan Pezoa
 
 ---
 
@@ -27,13 +27,13 @@ La aplicación aborda la necesidad de llevar un registro digital de una colecci�
 * **Lenguaje:** Java 17
 * **Framework:** Spring Boot 3
 * **Build Tool:** Maven
-* **IDE:** IntelliJ IDEA / VS Code
+* **IDE:** VS Code
 
 ### 🚀 Cómo Ejecutar el Proyecto
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://github.com/tu-usuario/tu-repositorio-privado.git](https://github.com/tu-usuario/tu-repositorio-privado.git)
+    git clone [https://github.com/hernanUpezoa/tp-integrador-programacion-avanzada.git](https://github.com/hernanUpezoa/tp-integrador-programacion-avanzada.git)
     ```
 2.  **Navegar a la carpeta del proyecto:**
     ```bash
