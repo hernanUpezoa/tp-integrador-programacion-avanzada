@@ -1,7 +1,7 @@
 // src/main/java/com/unab/tpf/integrador/service/CatalogoService.java
 package ar.edu.unab.tpf.service;
 
-import com.unab.tpf.integrador.model.Pelicula;
+import ar.edu.unab.tpf.model.Pelicula;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

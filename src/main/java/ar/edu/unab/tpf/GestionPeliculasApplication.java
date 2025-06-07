@@ -1,8 +1,8 @@
 // src/main/java/com/unab/tpf/integrador/GestionPeliculasApplication.java
 package ar.edu.unab.tpf;
 
-import com.unab.tpf.integrador.model.Pelicula;
-import com.unab.tpf.integrador.service.CatalogoService;
+import ar.edu.unab.tpf.model.Pelicula;
+import ar.edu.unab.tpf.service.CatalogoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
