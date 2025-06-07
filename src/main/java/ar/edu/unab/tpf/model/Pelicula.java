@@ -11,13 +11,13 @@ public class Pelicula {
     private String id; // Identificador único
     private String titulo;
     private String director;
-    private int ano; // Año de lanzamiento
+    private int anio; // Año de lanzamiento
 
-    public Pelicula(String id, String titulo, String director, int ano) {
+    public Pelicula(String id, String titulo, String director, int anio) {
         this.id = id;
         this.titulo = titulo;
         this.director = director;
-        this.ano = ano;
+        this.anio = anio;
     }
 
     // --- Getters y Setters ---
@@ -45,12 +45,12 @@ public class Pelicula {
         this.director = director;
     }
 
-    public int getAno() {
-        return ano;
+    public int getAnio() {
+        return anio;
     }
 
-    public void setAno(int ano) {
-        this.ano = ano;
+    public void setAnio(int anio) {
+        this.anio = anio;
     }
 
     // Método para mostrar la información de la película de forma clara
@@ -60,7 +60,7 @@ public class Pelicula {
                "ID='" + id + '\'' +
                ", Título='" + titulo + '\'' +
                ", Director='" + director + '\'' +
-               ", Año=" + ano +
+               ", Año=" + anio +
                '}';
     }
 }
