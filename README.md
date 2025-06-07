@@ -11,7 +11,7 @@ Este proyecto es una aplicación de consola **standalone** desarrollada en **Jav
 
 ---
 
-### 🎯 Problema Resuelto
+### Problema Resuelto
 
 La aplicación aborda la necesidad de llevar un registro digital de una colección personal de películas. Permite al usuario realizar las siguientes operaciones a través de un menú interactivo en la consola:
 
@@ -22,18 +22,18 @@ La aplicación aborda la necesidad de llevar un registro digital de una colecci�
 
 ---
 
-### 🛠️ Tecnologías Utilizadas
+### Tecnologías Utilizadas
 
 * **Lenguaje:** Java 17
 * **Framework:** Spring Boot 3
 * **Build Tool:** Maven
 * **IDE:** VS Code
 
-### 🚀 Cómo Ejecutar el Proyecto
+### Cómo Ejecutar el Proyecto
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://github.com/hernanUpezoa/tp-integrador-programacion-avanzada.git](https://github.com/hernanUpezoa/tp-integrador-programacion-avanzada.git)
+    git clone [https://github.com/hernanUpezoa/tp-integrador-programacion-avanzada.git]
     ```
 2.  **Navegar a la carpeta del proyecto:**
     ```bash
@@ -47,7 +47,7 @@ La aplicación aborda la necesidad de llevar un registro digital de una colecci�
 
 ---
 
-### 🏛️ Estructura y Diseño POO
+### Estructura y Diseño POO
 
 El proyecto está estructurado siguiendo las mejores prácticas para separar las responsabilidades, con un enfoque claro en POO:
 
