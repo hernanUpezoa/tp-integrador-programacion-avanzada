@@ -30,7 +30,7 @@ public class IntegradorApplication implements CommandLineRunner {
         while (opcion != 5) {
             mostrarMenu();
             try {
-                System.out.print("➡️  Seleccione una opción: ");
+                System.out.print("Seleccione una opción: ");
                 opcion = scanner.nextInt();
                 scanner.nextLine(); // Limpiar el buffer del scanner
 
@@ -39,11 +39,11 @@ public class IntegradorApplication implements CommandLineRunner {
                     case 2 -> agregarNuevaPelicula(scanner);
                     case 3 -> buscarPelicula(scanner);
                     case 4 -> eliminarPelicula(scanner);
-                    case 5 -> System.out.println("✅ Gracias por usar el sistema. ¡Hasta luego!");
-                    default -> System.out.println("❌ Opción no válida. Por favor, intente de nuevo.");
+                    case 5 -> System.out.println("Gracias por usar el sistema. ¡Hasta luego!");
+                    default -> System.out.println("Opción no válida. Por favor, intente de nuevo.");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("❌ Error: Por favor, ingrese un número válido.");
+                System.out.println("Error: Por favor, ingrese un número válido.");
                 scanner.nextLine(); // Limpiar el buffer en caso de error
             }
         }
@@ -73,7 +73,7 @@ public class IntegradorApplication implements CommandLineRunner {
         System.out.println("3. Drama");
         System.out.println("4. Ciencia Ficción");
         System.out.println("5. Terror");
-        System.out.print("➡️  Opción: ");
+        System.out.print("Opción: ");
         int tipo = scanner.nextInt();
         scanner.nextLine();
 
@@ -93,13 +93,13 @@ public class IntegradorApplication implements CommandLineRunner {
             case 4 -> nuevaPelicula = new PeliculaCienciaFiccion(null, titulo, director, anio);
             case 5 -> nuevaPelicula = new PeliculaTerror(null, titulo, director, anio);
             default -> {
-                System.out.println("❌ Género no válido.");
+                System.out.println("Género no válido.");
                 return;
             }
         }
 
         catalogoService.agregarPelicula(nuevaPelicula);
-        System.out.println("✔️ Película agregada con éxito.");
+        System.out.println("Película agregada con éxito.");
     }
 
     private void buscarPelicula(Scanner scanner) {
@@ -108,8 +108,8 @@ public class IntegradorApplication implements CommandLineRunner {
         String id = scanner.nextLine();
         catalogoService.buscarPorId(id)
                 .ifPresentOrElse(
-                        pelicula -> System.out.println("✔️ Película encontrada: " + pelicula),
-                        () -> System.out.println("❌ No se encontró ninguna película con ese ID.")
+                        pelicula -> System.out.println("Película encontrada: " + pelicula),
+                        () -> System.out.println("No se encontró ninguna película con ese ID.")
                 );
     }
 
@@ -118,9 +118,9 @@ public class IntegradorApplication implements CommandLineRunner {
         System.out.print("Ingrese el ID de la película a eliminar: ");
         String id = scanner.nextLine();
         if (catalogoService.eliminarPelicula(id)) {
-            System.out.println("✔️ Película eliminada con éxito.");
+            System.out.println("Película eliminada con éxito.");
         } else {
-            System.out.println("❌ No se encontró ninguna película con ese ID.");
+            System.out.println("No se encontró ninguna película con ese ID.");
         }
     }
 }
