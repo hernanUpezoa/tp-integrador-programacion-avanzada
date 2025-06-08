@@ -30,8 +30,7 @@ public class CatalogoService {
     }
 
     /**
-     * Devuelve todas las películas del catálogo.
-     * @return Una lista de películas.
+     * Devuelve una lista con todas las películas del catálogo.
      */
     public List<Pelicula> listarTodas() {
         return peliculas;
@@ -39,8 +38,8 @@ public class CatalogoService {
 
     /**
      * Busca una película por su ID.
-     * @param id El ID de la película a buscar.
-     * @return Un Optional que contiene la película si se encuentra.
+     * El parametro id es El ID de la película a buscar.
+     * Retorna un Optional que contiene la película si se encuentra.
      */
     public Optional<Pelicula> buscarPorId(String id) {
         return peliculas.stream()
@@ -51,7 +50,7 @@ public class CatalogoService {
     /**
      * Agrega una nueva película (de cualquier género) al catálogo.
      * Le asigna un ID único antes de agregarla.
-     * @param pelicula El objeto Pelicula (o una de sus hijas) a agregar.
+     * El parametro pelicula es El objeto Pelicula (o una de sus hijas) a agregar.
      */
     public void agregarPelicula(Pelicula pelicula) {
         String nuevoId = "P" + contadorId.incrementAndGet();
@@ -61,8 +60,8 @@ public class CatalogoService {
 
     /**
      * Elimina una película del catálogo usando su ID.
-     * @param id El ID de la película a eliminar.
-     * @return `true` si la película fue encontrada y eliminada, `false` en caso contrario.
+     * El parametro id es El ID de la película a eliminar.
+     * Retorna `true` si la película fue encontrada y eliminada, `false` en caso contrario.
      */
     public boolean eliminarPelicula(String id) {
         return peliculas.removeIf(pelicula -> pelicula.getId().equalsIgnoreCase(id));
