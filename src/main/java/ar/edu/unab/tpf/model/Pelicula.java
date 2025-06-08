@@ -4,7 +4,7 @@ package ar.edu.unab.tpf.model;
 /**
  * Clase que representa una Película en el catálogo.
  * Encapsula los datos de la película como id, título, director y año.
- * Este es nuestro objeto de dominio principal (POJO).
+ * Clase PADRE que sirve como base para todos los géneros.
  */
 public class Pelicula {
 

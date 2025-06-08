@@ -1,7 +1,7 @@
-// src/main/java/com/unab/tpf/integrador/service/CatalogoService.java
+// RUTA: src/main/java/ar/edu/unab/tpf/service/CatalogoService.java
 package ar.edu.unab.tpf.service;
 
-import ar.edu.unab.tpf.model.Pelicula;
+import ar.edu.unab.tpf.model.*; // Importa todas las clases del paquete model
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,20 +11,22 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Servicio para gestionar la lógica de negocio del catálogo de películas.
- * Utiliza principios de POO como la composición, al manejar una lista de objetos Pelicula.
+ * Utiliza principios de POO como la composición y el polimorfismo.
  */
 @Service
 public class CatalogoService {
 
+    // La lista puede contener cualquier objeto que sea hijo de Pelicula.
     private final List<Pelicula> peliculas = new ArrayList<>();
-    // Generador de IDs simples para las nuevas películas
     private final AtomicLong contadorId = new AtomicLong(100);
 
     public CatalogoService() {
-        // Precargamos algunos datos para la demostración
-        peliculas.add(new Pelicula("P001", "Pulp Fiction", "Quentin Tarantino", 1994));
-        peliculas.add(new Pelicula("P002", "The Godfather", "Francis Ford Coppola", 1972));
-        peliculas.add(new Pelicula("P003", "El Secreto de sus Ojos", "Juan José Campanella", 2009));
+        // Precargamos datos de ejemplo con los diferentes géneros.
+        peliculas.add(new PeliculaAccion("P001", "Duro de Matar", "John McTiernan", 1988));
+        peliculas.add(new PeliculaComedia("P002", "Supercool", "Greg Mottola", 2007));
+        peliculas.add(new PeliculaCienciaFiccion("P003", "Blade Runner", "Ridley Scott", 1982));
+        peliculas.add(new PeliculaDrama("P004", "Forrest Gump", "Robert Zemeckis", 1994));
+        peliculas.add(new PeliculaTerror("P005", "El Exorcista", "William Friedkin", 1973));
     }
 
     /**
@@ -47,16 +49,22 @@ public class CatalogoService {
     }
 
     /**
-     * Agrega una nueva película al catálogo, asignándole un ID único.
-     * @param titulo El título de la película.
-     * @param director El director de la película.
-     * @param ano El año de lanzamiento.
-     * @return La película creada.
+     * Agrega una nueva película (de cualquier género) al catálogo.
+     * Le asigna un ID único antes de agregarla.
+     * @param pelicula El objeto Pelicula (o una de sus hijas) a agregar.
      */
-    public Pelicula agregarPelicula(String titulo, String director, int ano) {
+    public void agregarPelicula(Pelicula pelicula) {
         String nuevoId = "P" + contadorId.incrementAndGet();
-        Pelicula nuevaPelicula = new Pelicula(nuevoId, titulo, director, ano);
-        peliculas.add(nuevaPelicula);
-        return nuevaPelicula;
+        pelicula.setId(nuevoId);
+        peliculas.add(pelicula);
+    }
+
+    /**
+     * Elimina una película del catálogo usando su ID.
+     * @param id El ID de la película a eliminar.
+     * @return `true` si la película fue encontrada y eliminada, `false` en caso contrario.
+     */
+    public boolean eliminarPelicula(String id) {
+        return peliculas.removeIf(pelicula -> pelicula.getId().equalsIgnoreCase(id));
     }
 }
